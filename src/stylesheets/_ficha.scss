@@ -1,0 +1,261 @@
+.sheet__wrapper {
+  width: 100%;
+  margin: 2em auto;
+  background-color: white;
+  position: relative;
+
+  @media (min-width: 800px) {
+    width: 800px;
+  }
+}
+
+.sheet {
+  font-size: 16px;
+  font-family: "hind", sans-serif;
+  padding: 1em;
+  position: relative;
+  min-width: 270px;
+
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.8) 10%
+    ),
+    url(../img/bg.png);
+
+  @media (min-width: 800px) {
+    background-size: cover;
+    border: 4px dashed black;
+  }
+}
+
+.sheetHeading {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sheetHeading-title {
+  order: 1;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: arial;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  width: 100%;
+  text-align: center;
+
+  @media (min-width: 800px) {
+    font-size: 40px;
+    transform: scaleY(0.8) translateY(-50%);
+  }
+}
+
+.sheetHeading-subtitle {
+  display: none;
+  @media (min-width: 800px) {
+    display: inherit;
+    text-transform: capitalize;
+    font-size: 32px;
+    transform: scaleY(0.7) translateY(-20%);
+  }
+}
+
+.inputGroup {
+  background-color: lightgray;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 0 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-top: 0.5em;
+
+  @media (min-width: 800px) {
+    justify-content: space-between;
+    flex-flow: row nowrap;
+  }
+}
+
+.inputGroup.--reverse {
+  @media (min-width: 800px) {
+    flex-flow: row-reverse;
+  }
+}
+
+.inputGroup > .inputGroup {
+  min-width: 0;
+  margin: 0;
+  flex: 1 100%;
+  @media (min-width: 800px) {
+    flex: 1;
+  }
+}
+
+.inputGroup > .inputGroup:first-child {
+  @media (min-width: 800px) {
+    flex: 4;
+  }
+}
+
+.inputGroup-input {
+  outline: none;
+  border: 1px solid black;
+  min-width: 0;
+  position: relative;
+  line-height: 25px;
+  bottom: 5px;
+  flex: 1;
+  padding: 0 0.5em;
+
+  @media (min-width: 800px) {
+    line-height: 30px;
+  }
+}
+
+.inputGroup-input.--small {
+  flex: 0;
+  min-width: 4em;
+}
+
+.inputGroup-input.--medium {
+  flex: 0;
+  min-width: 7em;
+}
+
+.inputGroup.--char .inputGroup-input {
+  @media (max-width: 799px) {
+    margin-left: auto;
+  }
+}
+
+.inputGroup.--char .inputGroup-label {
+  @media (max-width: 799px) {
+    width: auto;
+  }
+}
+
+.inputGroup-label {
+  width: 80px;
+  line-height: 2em;
+
+  @media (min-width: 800px) {
+    margin: 0 0.5em;
+    width: auto;
+    line-height: normal;
+  }
+}
+
+.inputGroup-double {
+  justify-content: flex-end;
+  flex: 1;
+  margin-left: auto;
+  text-align: right;
+
+  @media (min-width: 800px) {
+    text-align: left;
+    display: flex;
+    flex: 0;
+    min-width: 0;
+  }
+}
+
+.inputGroup-double .inputGroup-input {
+  @media (max-width: 799px) {
+    width: 3em;
+    min-width: 0;
+    margin-right: -5px;
+  }
+}
+
+.characterData {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  @media (min-width: 800px) {
+    flex-flow: column wrap;
+    height: 748px;
+  }
+}
+
+.characterData > section {
+  @media (min-width: 800px) {
+    padding-right: 20px;
+    width: 50%;
+  }
+}
+
+.characterData-heading {
+  text-transform: capitalize;
+  font-size: 28px;
+
+  @media (min-width: 800px) {
+    transform: scaleY(0.7) translateY(20%);
+    margin-top: -10px;
+  }
+}
+
+.characterData-textarea {
+  width: 100%;
+  resize: none;
+  padding: 5px;
+  overflow: auto;
+}
+
+.combatTutorial {
+  font-size: 10px;
+  line-height: 12px;
+  padding: 0 4px;
+  background-color: rgba(200, 200, 200, 0.9);
+
+  @media (max-width: 799px) {
+    margin-top: 10px;
+  }
+}
+
+.combatTutorial-heading {
+  margin: 16px 0;
+  font-size: 3em;
+
+  @media (min-width: 800px) {
+    margin: 3px 0;
+    transform: scaleY(0.5);
+  }
+}
+
+.combatTutorial-step {
+  font-weight: bold;
+  margin-top: 5px;
+  text-transform: capitalize;
+}
+
+.strongText {
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.strongText.--light {
+  text-transform: capitalize;
+}
+
+.strongText.--lighter {
+  text-transform: none;
+}
+
+.strongText::first-letter {
+  color: #666;
+  @media (min-width: 800px) {
+    font-size: 2em;
+    line-height: 0.8em;
+  }
+}
+
+.strongText.--small::first-letter {
+  font-size: 1em;
+}
+
+.strongText.--lighter::first-letter {
+  color: inherit;
+}
