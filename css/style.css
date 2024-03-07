@@ -46,9 +46,8 @@ textarea {
 }
 
 .sheet {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "hind", sans-serif;
-
   position: relative;
   min-width: 270px;
   background-image: url(../img/bg.png);
@@ -290,7 +289,7 @@ textarea {
 .characterData-heading {
   text-transform: capitalize;
   font-size: 35px;
-  color: #504f50;
+  color: #c20404;
 }
 @media (min-width: 800px) {
   .characterData-heading {
@@ -298,6 +297,31 @@ textarea {
     transform: scaleY(0.7) translateY(20%);
     margin-top: -10px;
   }
+}
+
+img {
+  width: 75%;
+  margin: auto;
+  display: block;
+  margin-bottom: 75px;
+  border-radius: 6px;
+}
+@media (min-width: 800px) {
+  img {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+  }
+
+.characterData-heading-link {
+  text-transform: capitalize;
+  font-size: 35px;
+  text-decoration: none;
+  color: #00d9ff;
 }
 
 .characterData-textarea {
